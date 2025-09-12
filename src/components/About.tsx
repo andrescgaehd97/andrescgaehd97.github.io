@@ -1,4 +1,3 @@
-import logo from "../public/me.jpg?url";
 
 const About = () => {
   const skills = [
@@ -27,7 +26,7 @@ const About = () => {
                   <div className="absolute inset-0 bg-gradient-to-r from-primary-600 to-primary-400 rounded-full animate-pulse opacity-75"></div>
                   <div className="absolute inset-2 bg-dark-800 rounded-full flex items-center justify-center">
                     <img 
-                      src={logo} 
+                      src="/me.jpg" 
                       alt="Profile" 
                       className="w-full h-full object-cover rounded-full"
                     />
