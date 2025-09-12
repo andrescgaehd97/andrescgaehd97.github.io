@@ -6,7 +6,7 @@ export default defineConfig({
   integrations: [
     react(), 
     tailwind({
-      applyBaseStyles: false,
+      applyBaseStyles: true,
     })
   ],
   site: 'https://andrescgaehd97.github.io/',
@@ -14,16 +14,13 @@ export default defineConfig({
   output: 'static',
   build: {
     assets: '_astro',
-    inlineStylesheets: 'never'
   },
   vite: {
     build: {
+      cssCodeSplit: false,
       rollupOptions: {
-        external: [],
         output: {
-          entryFileNames: '_astro/[name].[hash].js',
-          chunkFileNames: '_astro/[name].[hash].js',
-          assetFileNames: '_astro/[name].[hash].[ext]'
+          assetFileNames: '_astro/[name].[hash][extname]'
         }
       }
     }
