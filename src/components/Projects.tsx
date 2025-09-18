@@ -8,6 +8,14 @@ const Projects = () => {
       link: "https://andrescgaehd97.github.io/",
       github: "https://github.com/andrescgaehd97/andrescgaehd97.github.io"
     }
+    ,
+    {
+      title: "MCP Copilot Integration",
+      description: "A project demonstrating the integration of Model Context Protocol (MCP) with GitHub Copilot to enhance AI-assisted knowledge about Soccer.",
+      technologies: ["MCP", "FastMCP", "GitHub Copilot", "AI", "Python"],
+      image: "⚽",
+      github: "https://github.com/andrescgaehd97/FastMCP-Copilot-Integration"
+    }
   ];
 
   return (
@@ -45,9 +53,9 @@ const Projects = () => {
                       {tech}
                     </span>
                   ))}
-                </div>
-                
-                <div className="flex gap-4">
+                </div> 
+              <div className="flex gap-4">
+                {project.link && (
                   <a
                     href={project.link}
                     className="bg-primary-600 text-white px-4 py-2 rounded-lg hover:bg-primary-700 transition-colors flex items-center gap-2"
@@ -57,6 +65,8 @@ const Projects = () => {
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
                     </svg>
                   </a>
+                )}
+                <br></br>
                   <a
                     href={project.github}
                     className="border-2 border-primary-400/50 text-primary-300 px-4 py-2 rounded-lg hover:border-primary-400 hover:bg-primary-400/10 backdrop-blur-sm transition-colors flex items-center gap-2"
